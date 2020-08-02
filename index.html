@@ -1,0 +1,86 @@
+<html>
+<head>
+  <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" type="text/css" href="style.css"/>
+     <link rel="shortcut icon" href="https://images.unsplash.com/photo-1557576146-047908becbb4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=376&q=80" type="image/x-icon">
+
+</head>
+<script>
+function calc(form) {
+
+var D = "0";
+var A = document.getElementById("num1").value;
+var B = document.getElementById("op").value;
+var C = document.getElementById("num2").value;
+
+if (B === "+")
+{
+D = parseInt(A)+parseInt(C);
+}
+else if(B === "-")
+{
+D = parseInt(A)-parseInt(C);
+}
+else if(B === "*")
+{
+D = parseInt(A)*parseInt(C);
+}
+else if (B === "/")
+{
+D = parseInt(A)/parseInt(C);
+}
+else if (B === "^")
+{
+D = Math.pow(parseInt(A),parseInt(C));
+}
+document.getElementById("result").innerHTML = D;
+return false;
+}
+</script>
+<body>
+<center>
+  <font size="15px" color="white">
+  <h1>Calci <i class="fa fa-calculator" aria-hidden="true"></i></h1>
+  <p align="right"><button type="button" class="btn" onclick="on()"><b>Calci facts</b></button></p></font>
+    <div id="overlay" onclick="off()">
+      <font color="white" size="5px">
+       <h1>Calci Facts <i class="fa fa-calculator" aria-hidden="true"></i></h1>
+
+<blockquote>
+         1.The first mechanical calculator was invented by Blaise Pascal, a French mathematician, when he was 19 in 1642, to help is father calculate mathematic sums.<br><br>
+         2.Calculators were originally gear driven wheels, but now they use a chip, typically a microchip, and some kind of energy source.<br><br>
+         3.The first handheld calculator was invented by Texas Instruments, an American company, in 1967, and were further developed in the early 1970s.<br><br>
+         4.School students are common users of calculators, using them to calculate difficult sums, although some say children are too dependent on the devices.<br><br>
+         5.Calculators are often powered with chemical or battery energy, solar energy or electrical energy.<br><br>
+        6.Scientific calculators are devices that are able to deal with more complicated calculations, having more mathematical symbols, and can hold more than one number at a time, compared to the original calculator.<br><br>
+         7.Abacuses were early types of calculators, aiding the person who was calculating, but in Western countries, electronic calculators are nearly always used.<br><br>
+</blockquote>
+<button type="button" class="btn1" onclick="off()" ><b>Interesting!! Take me back to Calculations</b></button>
+</font>
+
+    </div>
+  <font size="15px" color="white">
+    <p><b>Num1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Operator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Num2</b><br>
+<input type="text" id="num1" name="num1"/>
+<input type="text" id="op" name="op" />
+<input type="text" id="num2" name="num2" /></p>
+<input type="button" value="Calculate" onClick="calc(this)">
+<input type="button" value="Clear" onClick="refresh()">
+<script>
+  function refresh() {
+    location.reload();
+  }
+</script>
+<br>
+<b>Result: &nbsp;&nbsp;&nbsp;<p id="result" name="r1">
+</b></p>
+</font>
+</center>
+
+</body>
+<center>
+<font color="white" size="5px"><p><b>&copy;Copyright<a href="index.html">www.calci.com</a></b></p></font>
+</center>
+<script src="script.js"></script>
+</html>
